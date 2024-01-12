@@ -1,14 +1,16 @@
+-- Update
+
 -- Klienci
 
 UPDATE Klienci
 SET NumerTel = '555000111'
-WHERE KlientID = 1;
+WHERE Nazwisko = 'Wójcik';
 
 UPDATE Klienci
 SET Nazwisko = 'Nowacki'
 WHERE DataUr < '1990-01-01';
 
-Pracownicy
+-- Pracownicy
 
 UPDATE Pracownicy
 SET Stanowisko = 'Specjalista ds. Klientów'
@@ -77,3 +79,47 @@ WHERE SamochodWypozyczenie = 12;
 UPDATE SamochodWypozyczenie
 SET WypozyczenieID = 8
 WHERE SamochodID = 6;
+
+-- Delete
+
+-- Klienci
+
+DELETE FROM Pracownicy WHERE PracownikID = 2;
+DELETE FROM Klienci WHERE NumerTel LIKE '555%';
+
+-- Pracownicy
+
+DELETE FROM Samochody WHERE SamochodID = 1;
+DELETE FROM Pracownicy WHERE Stanowisko = 'Recepcjonistka';
+
+-- Samochody
+
+DELETE FROM Samochody WHERE SamochodID = 5;
+DELETE FROM Samochody WHERE Silnik = 'Diesel';
+
+-- Lokalizacje
+
+DELETE FROM Lokalizacje WHERE LokalizacjaID = 2;
+DELETE FROM Lokalizacje WHERE Miasto LIKE 'W%';
+
+-- Platnosci
+
+DELETE FROM Platnosci WHERE PlatnoscID = 7;
+DELETE FROM Platnosci WHERE TypPlatnosci = 'Kartą';
+
+-- Oddzialy
+
+DELETE FROM Oddzialy WHERE OddzialID = 3;
+DELETE FROM Oddzialy WHERE PracownikID IS NULL;
+
+-- Wypozyczenie
+
+DELETE FROM Wypozyczenie WHERE WypozyczenieID = 6;
+DELETE FROM Wypozyczenie WHERE DaataOd < '2023-11-10';
+
+-- SamochodWypozyczenie
+
+DELETE FROM SamochodWypozyczenie WHERE SamochodWypozyczenie = 5;
+DELETE FROM SamochodWypozyczenie WHERE SamochodID = 6;
+
+TRUNCATE TABLE wypozyczenie;
