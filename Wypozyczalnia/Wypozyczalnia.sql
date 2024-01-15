@@ -33,9 +33,9 @@ CREATE TABLE Lokalizacje(
 
 CREATE TABLE Platnosci(
     `PlatnoscID` int not null,
+    `TypPlatnosci` enum('Kartą', 'Gotówka'),
     `Kwota` double,
     `Data` date,
-    `TypPlatnosci` enum('Kartą', 'Gotówka'),
     primary key(PlatnoscID));
 
 CREATE TABLE Oddzialy(
