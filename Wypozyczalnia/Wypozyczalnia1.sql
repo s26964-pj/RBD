@@ -118,7 +118,10 @@ VALUES
 (7, 'Martyna', 'Wójcik', 'Konsultant ds. Klientów', '999000111'),
 (8, 'Paweł', 'Makowski', 'Informatyk', '333444555'),
 (9, 'Karolina', 'Mazur', 'Konsultant ds. Płatności', '000111222'),
-(10, 'Tomasz', 'Nowacki', 'Serwisant', '666777888');
+(10, 'Tomasz', 'Nowacki', 'Serwisant', '666777888'),
+(11, 'Mariusz', 'Nowak', 'Manager', '111222333'),
+(12, 'Alicja', 'Kowalska', 'Recepcjonistka', '444555666'),
+(13, 'Krzysztof', 'Duda', 'Konsultant ds. Wypożyczeń', '777888999');
 
 INSERT INTO Platnosci (`PlatnoscID`, `Kwota`, `Data`, `TypPlatnosci`)
 VALUES
@@ -144,7 +147,10 @@ VALUES
 (7, 7, 7, 'Oddzial Lodz', '777777777'),
 (8, 8, 8, 'Oddzial Lublin', '888888888'),
 (9, 9, 9, 'Oddzial Szczecin', '999999999'),
-(10, 10, 10, 'Oddzial Rzeszow', '000000000');
+(10, 10, 10, 'Oddzial Rzeszow', '000000000'),
+(11, 1, 11, 'Oddzial Warszawa', '111111111'),
+(12, 1, 12, 'Oddzial Warszawa', '111111111'),
+(13, 3, 13, 'Oddzial Poznan', '333333333');
 
 INSERT INTO Wypozyczenie (`WypozyczenieID`, `KlientID`, `PlatnoscID`, `OddzialID`, `DaataOd`, `DataDo`)
 VALUES
@@ -152,7 +158,7 @@ VALUES
 (2, 2, 2, 2, '2023-11-03', '2023-11-12'),
 (3, 3, 3, 3, '2023-11-05', '2023-11-14'),
 (4, 4, 4, 4, '2023-11-07', '2023-11-16'),
-(5, 5, 5, 5, '2023-11-09', '2023-11-18'),
+(5, 7, 5, 2, '2023-11-09', '2023-11-18'),
 (6, 6, 6, 6, '2023-11-11', '2023-11-20'),
 (7, 7, 7, 7, '2023-11-13', '2023-11-22'),
 (8, 8, 8, 8, '2023-11-15', '2023-11-24'),

@@ -281,9 +281,8 @@ GROUP BY SamochodID;
 
 -- Truncate
 
-TRUNCATE TABLE wypozyczenie;
+truncate table wypozyczenie;
 
-TRUNCATE TABLE klienci;
-
+truncate table klienci;
 
 
